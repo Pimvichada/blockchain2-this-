@@ -1,0 +1,259 @@
+/* Reset */
+body, h1, h2, p, div, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fce38a, #dbd6d6);
+    background-size: 200% 200%;
+    animation: gradientBackground 5s ease infinite;
+    color: #2d3436;
+    line-height: 1.6;
+}
+
+/* Animation for background gradient */
+@keyframes gradientBackground {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #e3d80925, #74b9ff);
+    color: white;
+    padding: 20px 30px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1000;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+header:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+}
+
+header h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Merriweather', serif; /* Elegant serif font for header */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header button {
+    background: linear-gradient(135deg, #d8e481, #decd7e);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+header button:hover {
+    background: linear-gradient(135deg, #ba7ee2, #e7e96e);
+    transform: scale(1.05);
+}
+
+/* Stats section */
+.stats {
+    margin: 20px 0;
+    background: rgba(244, 237, 211, 0.8); /* Slight transparency for depth */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.stats:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stats h2 {
+    font-size: 2.2rem;
+    color: #533324;
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-family: 'Merriweather', serif;
+}
+
+.stats-cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1 1 30%;
+    background: white;
+    border: 1px solid #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+}
+
+.card button {
+    background: linear-gradient(135deg, #d4ec6b, #b34bc8);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.card button:hover {
+    background: linear-gradient(135deg, #e187ed, #cc67d1);
+    transform: scale(1.1);
+}
+
+/* Bikes section */
+.bikes-container {
+    width: 100%;
+    margin: 20px 0;
+    padding: 30px;
+    background: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bikes-container h2 {
+    font-size: 2.2rem;
+    color: #2d3436;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-family: 'Merriweather', serif;
+}
+
+.bikes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.bike-card {
+    background: white;
+    border: 1px solid #dcdde1;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.bike-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.bike-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain; /* หรือใช้ cover ถ้าต้องการให้ภาพเต็มกรอบ */
+    border-bottom: 1px solid #dfe6e9;
+}
+
+
+.bike-card p {
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #2d3436;
+}
+
+.bike-card button {
+    background: linear-gradient(135deg, #ab34b2, #f5f58e);
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.bike-card button:hover {
+    background: linear-gradient(135deg, #b773d8, #b572df);
+    transform: scale(1.05);
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0984e3;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.scroll-to-top:hover {
+    background: #74b9ff;
+}
+
+.scroll-to-top:active {
+    transform: scale(0.95);
+}
+
+/* Subtle transitions */
+* {
+    transition: all 0.3s ease;
+}

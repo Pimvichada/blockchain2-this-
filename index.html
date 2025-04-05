@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Rental App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bike Rental App</h1>
+            <button id="walletButton">Connect Wallet</button>
+            <p id="walletAddress">Not connected</p> <!-- Display the connected wallet address -->
+        </header>
+        <main>
+            <section class="stats">
+                <h2>Welcome Here are your stats:</h2>
+                <div class="stats-cards">
+
+                    <div class="card">
+                        <p>สถานะมัดจำ</p>
+                        <!-- span id="ethCredit">0.00 ETH</span> -->
+                        <span id="outputLabel"></span>
+                        <div>
+                        <button id="payDueButton">จ่ายมัดจำ</button>
+                        <button id="withdrawButton">ถอนมัดจำ</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <p>ค่าบริการ</p>
+                        <!-- <span id="outputLabel"></span> -->
+                        <span id="output2"></span>
+                        <button id="creditAccountButton">จ่าย</button>
+                    </div>
+
+                    <div class="card">
+                        <p>เวลาใช้งาน</p>
+                        <span id="output1">0</span>
+                    </div>
+
+                    <!-- <div class="card warning">
+                        <p>Bike Status</p>
+                        <span id="bikeStatus"></span>
+                    </div>
+                    -->
+                
+                   
+                </div>
+            </section>
+            
+            <section class="bikes">
+                <div class="bike-card" id="bike-1">
+                    <img src="1.jpg" alt="Bike 1">
+                    <p> Bike 1</p>
+                    <button class="checkout-btn" data-bike-id="1">Check Out</button>
+                    <button class="checkin-btn" data-bike-id="1">Check In</button>
+                </div>
+                <div class="bike-card" id="bike-2">
+                    <img src="2.1.jpg" alt="Bike 2">
+                    <p>Bike 2</p>
+                    <button class="checkout-btn" data-bike-id="2">Check Out</button>
+                    <button class="checkin-btn" data-bike-id="2">Check In</button>
+                </div>
+                <div class="bike-card" id="bike-3">
+                    <img src="3.jpg" alt="Bike 3">
+                    <p> Bike 3</p>
+                    <button class="checkout-btn" data-bike-id="3">Check Out</button>
+                    <button class="checkin-btn" data-bike-id="3">Check In</button>
+                </div>
+                <div class="bike-card" id="bike-4">
+                    <img src="4.png" alt="Bike 4">
+                    <p> Bike 4</p>
+                    <button class="checkout-btn" data-bike-id="4">Check Out</button>
+                    <button class="checkin-btn" data-bike-id="4">Check In</button>
+                </div>
+                <div class="bike-card" id="bike-5">
+                    <img src="5.jpg" alt="Bike 5">
+                    <p> Bike 5</p>
+                    <button class="checkout-btn" data-bike-id="5">Check Out</button>
+                    <button class="checkin-btn" data-bike-id="5">Check In</button>
+                </div>
+                <div class="bike-card" id="bike-6">
+                    <img src="6.jpg" alt="Bike 6">
+                    <p> Bike 6</p>
+                    <button class="checkout-btn" data-bike-id="6">Check Out</button>
+                    <button class="checkin-btn" data-bike-id="6">Check In</button>
+                </div>
+                <div class="bike-card" id="bike-7">
+                    <img src="7.jpg" alt="Bike 7">
+                    <p> Bike 7</p>
+                    <button class="checkout-btn" data-bike-id="7">Check Out</button>
+                    <button class="checkin-btn" data-bike-id="7">Check In</button>
+                </div>
+                <div class="bike-card" id="bike-8">
+                    <img src="8.jpg" alt="Bike 8">
+                    <p>Bike 8</p>
+                    <button class="checkout-btn" data-bike-id="8">Check Out</button>
+                    <button class="checkin-btn" data-bike-id="8">Check In</button>
+                </div>
+                <div class="bike-card" id="bike-9">
+                    <img src="9.jpg" alt="Bike 9">
+                    <p> Bike 9</p>
+                    <button class="checkout-btn" data-bike-id="9">Check Out</button>
+                    <button class="checkin-btn" data-bike-id="9">Check In</button>
+                </div>
+                <div class="bike-card" id="bike-10">
+                    <img src="10.png" alt="Bike 10">
+                    <p> Bike 10</p>
+                    <button class="checkout-btn" data-bike-id="10">Check Out</button>
+                    <button class="checkin-btn" data-bike-id="10">Check In</button>
+                </div>
+                <div class="bike-card" id="bike-11">
+                    <img src="11.jpg" alt="Bike 11">
+                    <p> Bike 11</p>
+                    <button class="checkout-btn" data-bike-id="11">Check Out</button>
+                    <button class="checkin-btn" data-bike-id="11">Check In</button>
+                </div>
+                <div class="bike-card" id="bike-12">
+                    <img src="12.jpg" alt="Bike 12">
+                    <p> Bike 12</p>
+                    <button class="checkout-btn" data-bike-id="12">Check Out</button>
+                    <button class="checkin-btn" data-bike-id="12">Check In</button>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+    <script src="script3.js"></script>
+</body>
+</html>
+
